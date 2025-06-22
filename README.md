@@ -18,6 +18,21 @@ west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=the_paintbrush_left -DZMK_CONF
 ```
 
 ``` patch
+diff --git a/.gitignore b/.gitignore
+index 329f3e5..0f2e7e6 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,7 @@
+-.build/
+\ No newline at end of file
++.build/
++build/
++.west/
++modules/
++zephyr/
++zmk-dynamic-bt-profile-names/
++zmk/
+\ No newline at end of file
 diff --git a/config/west.yml b/config/west.yml
 index 1f5b42f..d22f99c 100644
 --- a/config/west.yml
