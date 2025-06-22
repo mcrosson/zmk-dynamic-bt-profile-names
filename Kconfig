@@ -1,0 +1,3 @@
+# Turn on bt dynamic naming
+config CONFIG_BT_DEVICE_NAME_DYNAMIC
+    default y

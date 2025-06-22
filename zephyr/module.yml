@@ -1,0 +1,4 @@
+name: zmk-dynamic-bt-profile-names
+build:
+  cmake: .
+  kconfig: Kconfig

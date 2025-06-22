@@ -1,0 +1,1 @@
+target_sources(app PRIVATE src/bt_dynamic_naming.c)
