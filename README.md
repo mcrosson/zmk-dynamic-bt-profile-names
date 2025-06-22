@@ -6,7 +6,13 @@ This repo implements dynamic bluetooth profile naming for zmk as a module.
 
 Please see the zmk docs about modules for how to add this module to your zmk builds.
 
+## Requirements
+
+The zmk version being used for build must include the commit from [this](https://github.com/zmkfirmware/zmk/pull/2335) pull request.
+
 ## Building
+
+### Commands
 
 ``` sh
 docker run --rm -it -v s:/src/zmk-ardux-kmn:/zmk-ardux-kmn zmkfirmware/zmk-build-arm:stable
@@ -16,6 +22,8 @@ west update
 west zephyr-export
 west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=the_paintbrush_left -DZMK_CONFIG="/zmk-ardux-kmn/config"
 ```
+
+### Local zmk-config patch
 
 ``` patch
 diff --git a/.gitignore b/.gitignore
